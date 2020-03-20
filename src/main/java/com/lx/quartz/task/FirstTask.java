@@ -18,7 +18,6 @@ public class FirstTask implements Job {
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         System.out.println("执行第1个任务， " +
                 new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-        String[] a = null;
-        System.out.println(a[0]);
     }
+
 }

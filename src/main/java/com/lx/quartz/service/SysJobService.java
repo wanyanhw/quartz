@@ -1,6 +1,7 @@
 package com.lx.quartz.service;
 
 import com.lx.quartz.entity.SysJobEntity;
+import org.quartz.SchedulerException;
 
 import java.util.List;
 
@@ -17,8 +18,21 @@ public interface SysJobService {
 
     /**
      * 开启任务
-     * @param jobName
-     * @param groupName
+     * @param jobName 任务名称
+     * @param groupName 组名称
+     * @param id 任务id
+     * @throws SchedulerException 异常信息
+     * @return boolean 成功-true，失败-false
      */
-    void start(String jobName, String groupName);
+    boolean start(String jobName, String groupName, Integer id) throws SchedulerException;
+
+    /**
+     * 暂停任务
+     * @param jobName 任务名称
+     * @param groupName 分组名称
+     * @param id 任务ID
+     * @throws SchedulerException 异常信息
+     * @return boolean 成功-true，失败-false
+     */
+    boolean pause(String jobName, String groupName, Integer id) throws SchedulerException;
 }

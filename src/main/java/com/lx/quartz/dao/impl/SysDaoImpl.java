@@ -22,4 +22,9 @@ public class SysDaoImpl implements SysJobDao {
     public List<SysJobEntity> list(SysJobEntity sysJobEntity) {
         return sysJobMapper.list(sysJobEntity);
     }
+
+    @Override
+    public int edit(SysJobEntity sysJobEntity) {
+        return sysJobMapper.edit(sysJobEntity);
+    }
 }

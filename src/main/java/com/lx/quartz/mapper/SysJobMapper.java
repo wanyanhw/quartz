@@ -16,4 +16,11 @@ public interface SysJobMapper {
      * @return 返回值
      */
     List<SysJobEntity> list(SysJobEntity sysJobEntity);
+
+    /**
+     * 编辑任务
+     * @param sysJobEntity 传入参数
+     * @return 影响结果数量
+     */
+    int edit(SysJobEntity sysJobEntity);
 }

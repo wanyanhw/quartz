@@ -41,6 +41,7 @@ public class StartRunConfig implements CommandLineRunner {
                         .startNow()
                         .withSchedule(
                                 CronScheduleBuilder.cronSchedule(jobEntity.getCronExpression())
+                                .withMisfireHandlingInstructionDoNothing()
                         )
                         .build();
                 scheduler.scheduleJob(jobDetail, trigger);
